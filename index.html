@@ -10,33 +10,30 @@
   <h1>🚀 Spuff Projects</h1>
 
   <div class="grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/600x400" alt="Proyecto 1">
+    <div class="card" style="--bg:url('https://via.placeholder.com/600x400/111/fff?text=Proyecto+1')">
       <div class="card-content">
         <h2>Proyecto 1</h2>
-        <p>Descripción breve de este proyecto. Todo está oscuro y elegante.</p>
+        <p>Descripción breve de este proyecto. Oscuro y elegante.</p>
       </div>
     </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/600x400" alt="Proyecto 2">
+    <div class="card" style="--bg:url('https://via.placeholder.com/600x400/222/fff?text=Proyecto+2')">
       <div class="card-content">
         <h2>Proyecto 2</h2>
         <p>Otro proyecto mostrado en este estilo minimalista.</p>
       </div>
     </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/600x400" alt="Proyecto 3">
+    <div class="card" style="--bg:url('https://via.placeholder.com/600x400/333/fff?text=Proyecto+3')">
       <div class="card-content">
         <h2>Proyecto 3</h2>
-        <p>Un tercer proyecto con imagen y texto.</p>
+        <p>Un tercer proyecto con animación al pasar.</p>
       </div>
     </div>
   </div>
 
   <script>
-    // Animación con Intersection Observer (aparece al hacer scroll)
+    // Animación de aparición al hacer scroll
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
