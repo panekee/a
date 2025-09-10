@@ -33,7 +33,7 @@ h1 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
   opacity: 0;
   transform: translateY(50px);
-  transition: transform 0.4s ease, opacity 0.6s ease, background-image 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.6s ease, background-image 0.6s ease;
   height: 200px;
   display: flex;
   align-items: flex-end;
@@ -54,7 +54,17 @@ h1 {
   width: 100%;
 }
 
+.card-content h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
 .card:hover {
   transform: scale(1.05);
   background-image: var(--bg);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
 }
