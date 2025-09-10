@@ -3,110 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto 1 - Descarga</title>
-  <link rel="stylesheet" href="../../style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #000 70%, #333);
-      color: #eee;
-      text-align: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      padding: 3rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .download-btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #28a745;
-      color: white;
-      font-size: 1.3rem;
-      font-weight: bold;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .download-btn:hover {
-      background: #218838;
-      transform: scale(1.05);
-    }
-
-    .code-box {
-      background: #1e1e1e;
-      border-radius: 15px;
-      padding: 1.5rem;
-      text-align: left;
-      margin: 2rem 0;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-      overflow-x: auto;
-    }
-
-    pre {
-      margin: 0;
-      color: #0f0;
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-
-    a.github-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a.github-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>Spuff | Proyectos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Proyecto 1</h1>
+  <!-- Menú principal -->
+  <nav>
+    <div class="logo">Spuff</div>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <!-- Botón de descarga -->
-    <a href="../../descargas/proyecto1/DotDash.py" class="download-btn">⬇ Descargar</a>
+  <!-- Inicio -->
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a Spuff.xyz</h1>
+    <p>Mis proyectos simples, útiles e innovadores.</p>
+  </section>
 
-    <!-- Código base -->
-    <div class="code-box">
-      <h2>Código base</h2>
-      <pre>
-const int led = 13;
-const int dot = 250;
-
-void setup() {
-  pinMode(led, OUTPUT);
-}
-
-void blinkDot() {
-  digitalWrite(led, HIGH); delay(dot);
-  digitalWrite(led, LOW); delay(dot);
-}
-
-void blinkDash() {
-  digitalWrite(led, HIGH); delay(dot*3);
-  digitalWrite(led, LOW); delay(dot);
-}
-
-void loop() {
-  blinkDot(); blinkDash();
-  delay(dot*7);
-}
-      </pre>
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="projects">
+      <div class="card" onclick="location.href='/proyectos/proyecto1/'">
+        <h3>🔑 Generador de Contraseñas</h3>
+        <p>Crea contraseñas seguras y fáciles de recordar.</p>
+      </div>
+      <div class="card" onclick="location.href='/proyectos/proyecto2/'">
+        <h3>📂 Organizador de Archivos</h3>
+        <p>Ordena tus descargas en un clic.</p>
+      </div>
+      <div class="card" onclick="location.href='/proyectos/proyecto3/'">
+        <h3>📝 Bloc de Notas</h3>
+        <p>Escribe sin distracciones, todo se guarda solo.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Link a GitHub -->
-    <a href="https://github.com/TU-USUARIO/TU-REPO" target="_blank" class="github-link">
-      🔗 Ver en GitHub
-    </a>
-  </div>
+  <!-- Sobre mí -->
+  <section id="sobre">
+    <h2>Sobre mí</h2>
+    <p>Soy socio, creo software minimalista para problemas reales.</p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes encontrarme en <a href="https://github.com/">GitHub</a>.</p>
+  </section>
 </body>
 </html>
+
