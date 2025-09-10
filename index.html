@@ -3,69 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis Proyectos</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Proyecto 1 - Descarga</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #000 70%, #333);
+      color: #eee;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #28a745;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background: #218838;
+      transform: scale(1.05);
+    }
+
+    .code-box {
+      background: #1e1e1e;
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: left;
+      margin: 2rem 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      overflow-x: auto;
+    }
+
+    pre {
+      margin: 0;
+      color: #0f0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    a.github-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.github-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Mis Proyectos</h1>
-  </header>
+  <div class="container">
+    <h1>Proyecto 1</h1>
 
-  <main>
-    <div class="projects">
-      <div class="card" style="--bg:url('img/proyecto1.jpg')">
-        <div class="card-content">
-          <h2>Proyecto 1</h2>
-          <p>Descripción breve del proyecto 1.</p>
-        </div>
-      </div>
+    <!-- Botón de descarga -->
+    <a href="../../descargas/proyecto1.zip" class="download-btn">⬇ Descargar</a>
 
-      <div class="card" style="--bg:url('img/proyecto2.jpg')">
-        <div class="card-content">
-          <h2>Proyecto 2</h2>
-          <p>Descripción breve del proyecto 2.</p>
-        </div>
-      </div>
+    <!-- Código base -->
+    <div class="code-box">
+      <h2>Código base</h2>
+      <pre>
+const int led = 13;
+const int dot = 250;
 
-      <div class="card" style="--bg:url('img/proyecto3.jpg')">
-        <div class="card-content">
-          <h2>Proyecto 3</h2>
-          <p>Descripción breve del proyecto 3.</p>
-        </div>
-      </div>
+void setup() {
+  pinMode(led, OUTPUT);
+}
 
-      <div class="card" style="--bg:url('img/proyecto4.jpg')">
-        <div class="card-content">
-          <h2>Proyecto 4</h2>
-          <p>Descripción breve del proyecto 4.</p>
-        </div>
-      </div>
+void blinkDot() {
+  digitalWrite(led, HIGH); delay(dot);
+  digitalWrite(led, LOW); delay(dot);
+}
 
-      <div class="card" style="--bg:url('img/proyecto5.jpg')">
-        <div class="card-content">
-          <h2>Proyecto 5</h2>
-          <p>Descripción breve del proyecto 5.</p>
-        </div>
-      </div>
+void blinkDash() {
+  digitalWrite(led, HIGH); delay(dot*3);
+  digitalWrite(led, LOW); delay(dot);
+}
 
-      <div class="card" style="--bg:url('img/proyecto6.jpg')">
-        <div class="card-content">
-          <h2>Proyecto 6</h2>
-          <p>Descripción breve del proyecto 6.</p>
-        </div>
-      </div>
+void loop() {
+  blinkDot(); blinkDash();
+  delay(dot*7);
+}
+      </pre>
     </div>
-  </main>
 
-  <script>
-    const cards = document.querySelectorAll('.card');
-
-    // Redirigir al hacer click
-    cards.forEach((card, i) => {
-      card.addEventListener('click', () => {
-        window.location.href = `PROYECTOS/proyecto1${i+1}/`;
-      });
-    });
-  </script>
+    <!-- Link a GitHub -->
+    <a href="https://github.com/TU-USUARIO/TU-REPO" target="_blank" class="github-link">
+      🔗 Ver en GitHub
+    </a>
+  </div>
 </body>
 </html>
