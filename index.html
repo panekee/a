@@ -3,74 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spuff Projects</title>
+  <title>Mis Proyectos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🚀 Spuff Projects</h1>
+  <header>
+    <h1>Mis Proyectos</h1>
+  </header>
 
-  <div class="grid">
-    <div class="card" style="--bg:url('img/proyecto1.jpg')">
-      <div class="card-content">
-        <h2>Proyecto 1</h2>
-        <p>Descripción breve de tu proyecto 1.</p>
+  <main>
+    <div class="projects">
+      <div class="card" style="--bg:url('img/proyecto1.jpg')">
+        <div class="card-content">
+          <h2>Proyecto 1</h2>
+          <p>Descripción breve del proyecto 1.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--bg:url('img/proyecto2.jpg')">
+        <div class="card-content">
+          <h2>Proyecto 2</h2>
+          <p>Descripción breve del proyecto 2.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--bg:url('img/proyecto3.jpg')">
+        <div class="card-content">
+          <h2>Proyecto 3</h2>
+          <p>Descripción breve del proyecto 3.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--bg:url('img/proyecto4.jpg')">
+        <div class="card-content">
+          <h2>Proyecto 4</h2>
+          <p>Descripción breve del proyecto 4.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--bg:url('img/proyecto5.jpg')">
+        <div class="card-content">
+          <h2>Proyecto 5</h2>
+          <p>Descripción breve del proyecto 5.</p>
+        </div>
+      </div>
+
+      <div class="card" style="--bg:url('img/proyecto6.jpg')">
+        <div class="card-content">
+          <h2>Proyecto 6</h2>
+          <p>Descripción breve del proyecto 6.</p>
+        </div>
       </div>
     </div>
-
-    <div class="card" style="--bg:url('img/proyecto2.jpg')">
-      <div class="card-content">
-        <h2>Proyecto 2</h2>
-        <p>Descripción breve de tu proyecto 2.</p>
-      </div>
-    </div>
-
-    <div class="card" style="--bg:url('img/proyecto3.jpg')">
-      <div class="card-content">
-        <h2>Proyecto 3</h2>
-        <p>Descripción breve de tu proyecto 3.</p>
-      </div>
-    </div>
-
-    <div class="card" style="--bg:url('img/proyecto4.jpg')">
-      <div class="card-content">
-        <h2>Proyecto 4</h2>
-        <p>Descripción breve de tu proyecto 4.</p>
-      </div>
-    </div>
-
-    <div class="card" style="--bg:url('img/proyecto5.jpg')">
-      <div class="card-content">
-        <h2>Proyecto 5</h2>
-        <p>Descripción breve de tu proyecto 5.</p>
-      </div>
-    </div>
-
-    <div class="card" style="--bg:url('img/proyecto6.jpg')">
-      <div class="card-content">
-        <h2>Proyecto 6</h2>
-        <p>Descripción breve de tu proyecto 6.</p>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <script>
-    // Animación de aparición al hacer scroll
     const cards = document.querySelectorAll('.card');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+
+    // Redirigir al hacer click
+    cards.forEach((card, i) => {
+      card.addEventListener('click', () => {
+        window.location.href = `/proyectos/proyecto${i+1}/`;
       });
-    }, { threshold: 0.2 });
-
-    cards.forEach(card => observer.observe(card));
-
-cards.forEach((card, i) => {
-  card.addEventListener('click', () => {
-    window.location.href = `/PROYECTOS/proyecto${i+1}/`;
-  });
-});
+    });
   </script>
 </body>
 </html>
