@@ -27,7 +27,6 @@ h1 {
 }
 
 .card {
-  background: rgba(30, 30, 30, 0.95);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
@@ -37,7 +36,7 @@ h1 {
   height: 200px;
   display: flex;
   align-items: flex-end;
-  background-image: var(--bg); /* Mostrar siempre la imagen */
+  background-image: var(--bg); /* Ahora siempre visible */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -64,6 +63,7 @@ h1 {
   font-size: 0.9rem;
 }
 
+/* Hover: solo agranda la tarjeta y añade sombra */
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
