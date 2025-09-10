@@ -1,30 +1,22 @@
-/* Sobrescribir el fondo solo para proyecto 1 */
 body {
-  background: linear-gradient(to bottom, #111 70%, #333);
+  background: linear-gradient(to bottom, #000 70%, #333);
 }
-
-/* Imagen más grande y centrada */
-img {
-  display: block;
-  margin: 0 auto 1rem auto;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+.download-btn {
+  background: #28a745;
+  border-radius: 12px;
 }
-
-/* Texto del proyecto */
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
-  color: #ccc;
+.download-btn:hover {
+  background: #218838;
+  transform: scale(1.05);
 }
-
-/* Botón volver */
-a {
-  display: inline-block;
-  margin: 1rem auto;
-  color: #eee;
-  text-decoration: underline;
-  font-weight: bold;
+.code-box {
+  background: #1e1e1e;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+pre {
+  color: #0f0;
+}
+a.github-link {
+  color: #00aaff;
 }
