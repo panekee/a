@@ -33,10 +33,11 @@ h1 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
   opacity: 0;
   transform: translateY(50px);
-  transition: transform 0.4s ease, opacity 0.6s ease, background-image 0.6s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.6s ease, box-shadow 0.4s ease;
   height: 200px;
   display: flex;
   align-items: flex-end;
+  background-image: var(--bg); /* Mostrar siempre la imagen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,11 +66,10 @@ h1 {
 
 .card:hover {
   transform: scale(1.05);
-  background-image: var(--bg);
   box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
 }
 
-/* Móvil: al tocar la tarjeta también mostrar la imagen */
+/* Móvil: mostrar imagen siempre */
 @media (hover: none) and (pointer: coarse) {
   .card {
     background-image: var(--bg);
