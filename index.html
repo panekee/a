@@ -65,6 +65,13 @@
     }, { threshold: 0.2 });
 
     cards.forEach(card => observer.observe(card));
+
+    // Redirigir al hacer click en la tarjeta
+    cards.forEach((card, i) => {
+      card.addEventListener('click', () => {
+        window.location.href = `proyecto${i+1}.html`;
+      });
+    });
   </script>
 </body>
 </html>
